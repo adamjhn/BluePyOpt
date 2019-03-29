@@ -79,8 +79,8 @@ class CompRecording(Recording):
             return None
 
         return responses.TimeVoltageResponse(self.name,
-                                             self.tvector.to_python(),
-                                             self.varvector.to_python())
+                                             self.tvector.as_numpy(),
+                                             self.varvector.as_numpy())
 
     def instantiate(self, sim=None, icell=None):
         """Instantiate recording"""
